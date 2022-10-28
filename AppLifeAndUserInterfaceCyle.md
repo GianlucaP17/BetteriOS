@@ -12,6 +12,7 @@ Partiamo con il dire che fino ad ios 12 la user interface e la app cycle erano c
 
 Quando lancio l’app i metodi che vengono chiamati sono: “Application WillFinishLaunchingWithOptions” e “Application DidFinishLaunchingWithOptions”. Solitamente nell’ultimo indicato, abbiamo il nostro setup dalla prima view da presentare
 
+![Screenshot](images/ios12%20before.png.png)
 
 - Will Finish > sta per finire di lanciare
 - Did Finish > ha finito di lanciare
@@ -34,21 +35,18 @@ Come mai questo? Poiché ora le app possono avere più interfacce utente, pensia
 Quindi… abbiamo ora due “gestori” separati, uno per Application life cycle (uno singolo), e uno per user interface il quale viene gestito da “UIWindowSceneDelegate”. > SceneDelegate e accetta più interfacce, una app più interfacce
 Ha il compito di gestire le singole scene, il loro stato
 
-
+![Screenshot](images/ios%2013%20before.png)
 
 Ogni scena ha il proprio stato e gestione. Ma tutte sempre collegate ad un singolo “UIApplication”.
 Processi app generali:
 
+![Screenshot](images/ios13beforeappfunc.png)
 
-
-AppDelegate Before ios 13 (storyboard)
-
-
-Senza storyboard
-
-
+![Screenshot](images/appdelegate2.png)
 
 AppDelegate dopo ios 13 > Scene-based app
+
+![Screenshot](images/appdelegateafter.png)
 
 Qui manca la parte “window”, dove sono impostate le scene. Ma abbiamo 2 nuovi metodi riguardanti le scene
 “ConfigurationForConnecting” serve al sistema per capire quale configurazione di base usare per creare la scena
@@ -57,7 +55,7 @@ Possiamo comunque contiunare a gestire qui la ricezione di notifiche ecc.
 
 Lo Scene Delegate
 
-
+![Screenshot](images/scneedelegate.png)
 
 Nel info.plist abbiamo una configurazione > “Enable multiple windows” il quale se l’app è impostata s ipad è yes altrimenti no
 I vari metodi funzionano come prima nel app delegate, fanno la stessa cosa, il punto è che ogni scena ha la sua gestione e non più generale
@@ -81,14 +79,9 @@ init() {
 Bugsnag.start()
 }
 
-Per gli stati:
-
-I quali ora sono diventati 3: active, inactive, background
-
-
-(app switcher > colui che gestisce il transito tra le varie app)
+![Screenshot](images/swiftuistate.png)
 
 Che succede se vogliamo il vecchio AppDelegate per gestire altri stati? “UIApplicationDelegateAdaptor”
-
+![Screenshot](images/swiftuiappdelegate.png)
 Visto che non tutti i metodi sono ancora disponibili, tipo per ricevere le notifiche, ecco come torno ad usare app delegate e tutti i suoi metodi!
 Qui definiamo UIApplicationDelegateAdaptor e gli diciamo > usa l’AppDelegate, non la struttura nuova di swiftui

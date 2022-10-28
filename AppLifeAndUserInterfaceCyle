@@ -8,7 +8,7 @@ Partiamo con il dire che fino ad ios 12 la user interface e la app cycle erano c
 2. Con il delegate riceve e gestisce eventi esterni/interni app. (touch, notifiche, app state….)
 3. UIApplication singleton manda notifiche a chi lo ascolta di vari eventi della app es. se è stata aperta, se background ecc..
 
-![alt text](https://github.com/GianlucaP17/BetteriOS/blob/main/images/appdelegate.png)
+![Screenshot](images/appdelegate.png)
 
 Quando lancio l’app i metodi che vengono chiamati sono: “Application WillFinishLaunchingWithOptions” e “Application DidFinishLaunchingWithOptions”. Solitamente nell’ultimo indicato, abbiamo il nostro setup dalla prima view da presentare
 

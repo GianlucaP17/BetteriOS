@@ -1,6 +1,6 @@
 View - ViewController Programming
 
-RootViewController:
+RootViewController:\n
 Quindi, una volta fatto l’accesso alla nostra app che succede? Abbiamo un punto di ingresso per la nostra view, dato dalla UIWindow!
 Questo ingresso è la nostra radice, “Root”ViewController, uno singolo per ogni UIWindow, il quale ha il compito di definire la prima view da fare vedere! Andando a cambiare la view del UIWindow.rootviewcontroller andiamo a cambiare la prima view che vediamo.
 

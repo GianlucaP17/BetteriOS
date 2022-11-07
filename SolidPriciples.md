@@ -1,6 +1,6 @@
 SOLID principles
 
-Principi “S.O.L.I.D.” cosa sono e cosa servono? https://github.com/omerfarukozturk/SOLID-Principles
+Principi “S.O.L.I.D.” cosa sono e cosa servono?
 Principi che ci aiutano a scrivere un codice chiaro e con meno sforzi, riutilizzabile.
 
 Single Responsibility Principle 

@@ -1,4 +1,4 @@
-![Screenshot](images/Introduzione_network_request.jpg)
+![Screenshot](../images/Introduzione_network_request.jpg)
 ![Screenshot](images/_1._internet_technologies_of_remote_api_calls.jpg)
 ![Screenshot](images/Making_REST_API_calls_using_HTTP_requests.jpg)
 ![Screenshot](images/Most_REST_APIs_return_structured_JSON_and_bin.jpg)
